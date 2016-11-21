@@ -6,6 +6,11 @@ h1 {
   text-align: center;
   font-family: Futura, Helvetica, Arial, sans-serif;
   padding-top: 5%;
+  font-size: 3.5em;
+}
+p {
+  text-align: center;
+  font-size: 2em;
 }
 .navbar {
 	text-transform: uppercase;
@@ -17,4 +22,13 @@ h1 {
 }
 footer {
   color: grey;
+  text-align: center;
 }
+.row {
+  margin-left: 30%;
+}
+.image {
+  width: 100%;
+  margin-left: 42.5%;
+}
+
