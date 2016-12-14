@@ -1,6 +1,6 @@
-
+  <div class="row">
     <div class="col-md-4 col-xs-6">
-      <h1><%= product.name %></h1>
+      <h2><%= product.name %></h2>
       <%= image_tag(product.image_url, class: "img-responsive") %>
       <p><%= product.description %></p>
       <strong><%= product.price %>$</strong>
@@ -8,5 +8,6 @@
       <td><%= link_to 'Edit', edit_product_path(product) %></td>
       <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
     </div><!-- /col -->
-   
+  </row>
+ 
   

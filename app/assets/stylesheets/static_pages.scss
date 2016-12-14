@@ -23,11 +23,13 @@ p {
  	text-decoration: none;
 }
 
-.row {
+
+#row1 {
+  max-width: 760px;
   margin-left: 30%;
 }
 .image {
-  width: 100%;
+  max-width: 200px;
   margin-left: 42.5%;
 }
 
@@ -50,5 +52,19 @@ font-family: 'Kalam', cursive;
 // footer
 .footer {
   color: grey;
+  text-align: center;
+}
+
+//Products
+.new {
+  text-align: left;
+}
+.row {
+  margin: auto;
+}
+.form-product {
+  text-align: center;
+}
+h2 {
   text-align: center;
 }

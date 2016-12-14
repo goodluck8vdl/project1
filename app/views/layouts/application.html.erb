@@ -21,10 +21,15 @@
            <span class="icon-bar"></span>
           </button>
           <div class="myProject navbar-brand">
-            <a href="#">My Project</a>
+            <a href="#">Best bikes</a>
           </div>
-        </div> <!-- end navbar-header -->
+         </div> <!-- end navbar-header -->
         <div class="navbar-collapse collapse">
+           <%= form_tag("/products", method: "get") do %>
+         <%= label_tag(:q, "Search for:") %>
+         <%= text_field_tag(:q) %>
+         <%= submit_tag("Search") %>
+          <% end %>
           <ul class="nav navbar-nav navbar-right">
             <li><a href="/">Home</a></li>
             <li><a href="/static_pages/about/">About</a></li>
