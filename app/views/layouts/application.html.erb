@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Workspace</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <%= csrf_meta_tags %>
-</head>
-<body>
+  <head>
+    <title>Workspace</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container-fluid">
         <div class="navbar-header">
@@ -25,11 +25,13 @@
           </div>
          </div> <!-- end navbar-header -->
         <div class="navbar-collapse collapse">
+          <div class="form">
            <%= form_tag("/products", method: "get") do %>
-         <%= label_tag(:q, "Search for:") %>
-         <%= text_field_tag(:q) %>
-         <%= submit_tag("Search") %>
-          <% end %>
+           
+           <%= text_field_tag(:q) %>
+           <%= submit_tag("Search") %>
+           <% end %>
+          </div>
           <ul class="nav navbar-nav navbar-right">
             <li><a href="/">Home</a></li>
             <li><a href="/static_pages/about/">About</a></li>
@@ -46,7 +48,7 @@
       <li>Contact</li>
     </ul>
   </nav> -->
-<%= yield %>
+  <%= yield %>
 
   <footer>
     <div class="footer">
@@ -54,5 +56,5 @@
     </div>
   </footer>
 
-</body>
+  </body>
 </html>

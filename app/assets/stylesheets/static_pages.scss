@@ -22,10 +22,14 @@ p {
  	text-transform: uppercase;
  	text-decoration: none;
 }
-
+.form {
+  margin-top: 12.5px;
+  margin-bottom: -40px;
+  color: black;
+}
 
 #row1 {
-  max-width: 760px;
+  max-width: 1000px;
   margin-left: 30%;
 }
 .image {
@@ -67,4 +71,10 @@ font-family: 'Kalam', cursive;
 }
 h2 {
   text-align: center;
+}
+
+// Contact page
+.panel-body {
+  margin-top: 85px;
+  
 }
