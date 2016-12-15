@@ -27,6 +27,10 @@ p {
   margin-bottom: -40px;
   color: black;
 }
+#log {
+  margin: 6px 12px 0 0;
+  
+}
 
 #row1 {
   max-width: 1000px;
@@ -77,4 +81,15 @@ h2 {
 .panel-body {
   margin-top: 85px;
   
+}
+
+// Log in - log out
+.header1 {
+  margin-top: 85px;
+  font-size: 3em;
+  text-transform: uppercase;
+}
+#row2, 
+#row3 {
+  margin-left: 38%;
 }
