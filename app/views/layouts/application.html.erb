@@ -56,16 +56,18 @@
       <li>Contact</li>
     </ul>
   </nav> -->
+
   <% if notice %>
     <div class="alert alert-info" role="alert">
       <p id="notice" class="alert alert-info"><%= notice %></p>
     </div>
-    <% end %>
+   <% end %>
     <% if alert %>
+    
     <div class="alert alert-danger" role="alert">
       <p id="alert" class="alert alert-info"><%= alert %></p>
     </div>
-    <% end %>
+  <% end %>  
   
   <%= yield %>
 
