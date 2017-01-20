@@ -23,10 +23,7 @@
     <%= @product.price %>
   </p>
   
-  
-  
   <p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div> </p>
-  
   
   <%= render partial: "new_comment" %> 
   <%= render partial: "comments" %>
@@ -37,6 +34,7 @@
     <%= hidden_field_tag(:product_id, @product.id) %>
   <% end %>
   
+  <%= image_tag("#{@product.image_url}", class: "img-responsive img-zoom", data_zoom_image: "#{@product.image_url}") %>
   <%= link_to 'Edit', edit_product_path(@product) %> |
   <%= link_to 'Back', products_path %>
   
