@@ -17,7 +17,6 @@ class PaymentsController < ApplicationController
 				      user_id: @user_id,
 				      total: @product.price
 				      )
-				      UserMailer.paid_success(@user, @product).deliver_now
 				      flash[:success] = "Payment processed successfully"
     end
     rescue Stripe::CardError => e
