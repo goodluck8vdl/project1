@@ -1,5 +1,7 @@
+
 <p id="notice"><%= notice %></p>
 <div class="product_container">
+  <% cache @product do %>
   <p>
     <strong>Name:</strong>
     <%= @product.name %>
@@ -22,6 +24,7 @@
     <strong>Price:</strong>
     <%= @product.price %>
   </p>
+  <% end %>
 
   <p>Average Rating: <div class="rated" id="average-rating" data-score="<%= @product.average_rating %>"></div> </p>
   
@@ -38,3 +41,4 @@
   <%= link_to 'Back', products_path %>
   
 </div>
+
