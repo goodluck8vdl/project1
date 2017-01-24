@@ -1,15 +1,14 @@
 <% if signed_in? %>
   <h4>Add a review:</h4>
   <%= form_for([@product, @product.comments.build], remote: true) do |f| %>
-    <p>
-      <%= f.label :body, "Comments" %><br>
-      <%= f.text_area :body %>
-    </p>
+  <div class="form-group">
+     <%= f.text_area :body, class: 'form-control' %>
+  </div>
     <p>
       <div class="rating"></div>
     </p>  
     <p>
-      <%= f.submit "Submit" %>
+      <%= f.submit "Submit", class:"btn btn-s btn-default-transparent" %>
     </p>
   <% end %>
 <% end %>

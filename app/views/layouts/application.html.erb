@@ -26,16 +26,16 @@
          </div> <!-- end navbar-header -->
         <div class="navbar-collapse collapse">
           <div class="form">
-           <%= form_tag("/products", method: "get") do %>
-           <%= text_field_tag(:q) %>
-           <%= submit_tag("Search") %>
+           <%= form_tag("/products", method: "get", class: "navbar-form navbar-left", role: "search") do %>
+           <%= text_field_tag(:q, nil, class: "form-control", placeholder: "Search") %>
+           <%= submit_tag("Search", class: "btn btn-s btn-default-transparent") %>
            <% end %>
           </div>
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="/">Home</a></li>
-            <li><a href="/static_pages/about/">About</a></li>
-            <li><a href="/static_pages/contact/">Contact</a></li>
-            <li><a href="/products/">Products</a></li>
+            <li><%= link_to "home", '/' %></li>
+            <li><%= link_to "About", '/static_pages/about' %></li>
+            <li><%= link_to "Contact", '/static_pages/contact' %></li>
+            <li><%= link_to "Products", products_path %></li>
           </ul>
           <ul class="nav pull-right" id="log">
             <li>
@@ -72,7 +72,7 @@
   <%= yield %>
 
   <footer>
-    <div class="footer">
+    <div class="footer navbar-fixed-bottom">
       &copy; 2016 Bike New York
     </div>
   </footer>

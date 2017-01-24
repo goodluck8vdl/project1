@@ -3,6 +3,10 @@ class Product < ActiveRecord::Base
     has_many :comments
     
     validates :name, presence: true
+    validates :description, presence: true
+	validates :image_url, presence: true
+	validates :colour, presence: true
+	validates :price, presence: true
     
     
     def highest_rating_comment

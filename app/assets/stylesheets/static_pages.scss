@@ -23,7 +23,6 @@ p {
  	text-decoration: none;
 }
 .form {
-  margin-top: 12.5px;
   margin-bottom: -40px;
   color: black;
 }
@@ -32,10 +31,7 @@ p {
   
 }
 
-#row1 {
-  max-width: 1000px;
-  margin-left: 30%;
-}
+
 .image {
   max-width: 200px;
   margin-left: 42.5%;
@@ -61,6 +57,10 @@ font-family: 'Kalam', cursive;
 .footer {
   color: grey;
   text-align: center;
+  
+  background-color: #F3F3F3;
+    padding-top: 10px;
+    padding-bottom: 0px;
 }
 
 //Products
@@ -70,12 +70,11 @@ font-family: 'Kalam', cursive;
 .edit {
   text-align: center;
 }
-.product_container {
-  width: 600px;
+.field {
+  width: 350px;
   margin: 0 auto;
-  text-align: center;
-  margin-top: 65px;
 }
+
 .form-product {
   text-align: center;
 }
@@ -86,6 +85,14 @@ h2 {
 // Contact page
 .panel-body {
   margin-top: 85px;
+}
+#row1 {
+  max-width: 1000px;
+  margin-left: 38%;
+}
+.btn-default-transparent {
+  border-color: black;
+  color: black;
   
 }
 

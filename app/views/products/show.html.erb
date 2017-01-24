@@ -2,43 +2,41 @@
 <p id="notice"><%= notice %></p>
 <div class="product_container">
   <div class="row" data-product-id="<%= @product.id %>">
-  <% cache @product do %>
-  <p>
-    <strong>Name:</strong>
-    <%= @product.name %>
-  </p>
-
-  <p>
-    <strong>Description:</strong>
-    <%= @product.description %>
-  </p>
-
-  <p>
-    <%= image_tag("#{@product.image_url}", class: "img-responsive img-zoom", data_zoom_image: "#{@product.image_url}") %>
-  </p>
-
-  <p>
-    <strong>Colour:</strong>
-    <%= @product.colour %>
-  </p>
-  <p>
-    <strong>Price:</strong>
-    <%= @product.price %>
-  </p>
-  <% end %>
+    <% cache @product do %>
+    <div class="col-sm-2 col-md-6">
+      <%= image_tag(@product.image_url, class: "img-responsive detail img-zoom", data_zoom_image: "@product.image_url_large") %>
+    </div>
+  
+    <div class="col-sm-2 col-md-6">
+      <div class="grid-description-detail">
+        <div class="description-detail">
+          <div class="">
+            <h2><%= @product.name %></h2>
+            <strong>Description:</strong>
+            <%= @product.description %>
+            <strong>Colour:</strong>
+            <%= @product.colour %>
+            <strong>Price:</strong>
+            <%= @product.price %>
+            <%= form_tag "/payments/create" do %>
+              <%= render partial: "shared/stripe_checkout_button" %>
+              <%= hidden_field_tag(:product_id, @product.id) %>
+            <% end %>
+            <%= render partial: "new_comment" %>
+            Average Rating: <div class="rated" id="average-rating" data-score="<%= @product.average_rating %>"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <% end %>
   </div> <!--row-->
 
-  <p>Average Rating: <div class="rated" id="average-rating" data-score="<%= @product.average_rating %>"></div> </p>
+  
   <div class="alert alert-info" style="display:none" role="alert">A new comment was posted!</div>
-  <%= render partial: "new_comment" %> 
   <%= render partial: "comments" %>
   <%= will_paginate @comments %>
   
-  <%= form_tag "/payments/create" do %>
-    <%= render partial: "shared/stripe_checkout_button" %>
-    <%= hidden_field_tag(:product_id, @product.id) %>
-  <% end %>
-  
+  <br>
   <%= link_to 'Edit', edit_product_path(@product) %> |
   <%= link_to 'Back', products_path %>
   
