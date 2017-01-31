@@ -13,4 +13,11 @@ class UserMailer < ApplicationMailer
     mail( :to => user.email,
       :subject => "Welcome to #{@appname}!")
   end
+  def paid_order(user, product)
+	  @user = user
+		@product = product
+	  @appname = "Bike Shop"
+	  mail( :to => user.email,
+	     :subject => "Your order on #{@appname}!")
+	end
 end
