@@ -7,10 +7,10 @@
     <%= devise_error_messages! %>
     <div class="row" id="row2">
       <div class="col-md-4">
-        <div class="field">
+        <div class="form-group">
           <%= f.email_field :email, autofocus: true, class: "form-control", placeholder: "Email Address" %>
         </div>
-        <div class="actions">
+        <div class="form-group">
           <%= f.submit "Send me reset password instructions", class: "btn btn-s" %>
         </div>
         <%= render "devise/shared/links" %>
