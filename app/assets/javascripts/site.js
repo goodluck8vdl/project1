@@ -13,9 +13,9 @@
    $('.img-zoom').elevateZoom({
      zoomType: "lens",
      lensShape: "square",
-     lensSize: 180,
+     lensSize: 120,
      scrollZoom: true,
-     lensFadeIn: 800,
-     lensFadeOut: 800
+     lensFadeIn: 700,
+     lensFadeOut: 700
     });
   });

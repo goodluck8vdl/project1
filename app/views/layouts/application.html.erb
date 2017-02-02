@@ -27,7 +27,7 @@
         <div class="navbar-collapse collapse">
           <div class="form">
            <%= form_tag("/products", method: "get", class: "navbar-form navbar-left", role: "search") do %>
-           <%= text_field_tag(:q, nil, class: "form-control", placeholder: "Search") %>
+           <%= text_field_tag(:q, nil, class: "form-control", placeholder: "Search for") %>
            <%= submit_tag("Search", class: "btn btn-s btn-default-transparent") %>
            <% end %>
           </div>
@@ -54,24 +54,19 @@
       <li>Contact</li>
     </ul>
   </nav> -->
-
-  <% if notice %>
-    <div class="alert alert-info" role="alert">
-      <p id="notice" class="alert alert-info"><%= notice %></p>
-    </div>
-   <% end %>
-    <% if alert %>
-    
-    <div class="alert alert-danger" role="alert">
-      <p id="alert" class="alert alert-info"><%= alert %></p>
-    </div>
-  <% end %>  
   
+  <% if notice %>
+    <p id="notice" class="alert alert-info"><%= notice %></p>
+    <% end %>
+
+    <% if alert %>
+    <p id="alert" class="alert alert-danger"><%= alert %></p>
+    <% end %>
   <%= yield %>
 
   <footer>
     <div class="footer navbar-fixed-bottom">
-      &copy; 2016 Bike New York
+      &copy; 2017 Bike New York
     </div>
   </footer>
 

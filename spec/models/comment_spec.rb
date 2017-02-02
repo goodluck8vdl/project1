@@ -1,9 +1,14 @@
 require 'rails_helper'
 
 describe Comment do
+  before do 
 
-	it "is valid" do
-    expect(FactoryGirl.build(:comment)).to be_valid
+	 @product = FactoryGirl.build(:product)
+    @user = FactoryGirl.build(:user)
+    @comment = @product.comments.new(rating: 5, user: @user, body: "This bike is perfect")
   end
 
+  it "is valid" do
+    expect(@comment).to be_valid
+  end
 end
